@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark earthy color palette matching the Hetu app screenshots -->
+    <color name="background">#1A1512</color>
+    <color name="surface">#2D2420</color>
+    <color name="surface_variant">#3D332C</color>
+    <color name="primary">#D4785A</color>
+    <color name="primary_variant">#B85A3C</color>
+    <color name="on_background">#E8DDD4</color>
+    <color name="on_surface">#C4B8AD</color>
+    <color name="accent">#4CAF50</color>
+</resources>
