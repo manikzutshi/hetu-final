@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="runanywhere-core-llamacpp-jvm-0.1.5-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-llamacpp/build/libs</output-path>
+    <root id="archive" name="runanywhere-core-llamacpp-jvm-0.1.5-SNAPSHOT.jar" />
+  </artifact>
+</component>

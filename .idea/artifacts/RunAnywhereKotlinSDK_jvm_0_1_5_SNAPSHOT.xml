@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="RunAnywhereKotlinSDK-jvm-0.1.5-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/build/libs</output-path>
+    <root id="archive" name="RunAnywhereKotlinSDK-jvm-0.1.5-SNAPSHOT.jar" />
+  </artifact>
+</component>

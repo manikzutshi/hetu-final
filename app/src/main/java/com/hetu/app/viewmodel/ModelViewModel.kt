@@ -73,9 +73,10 @@ class ModelViewModel : ViewModel() {
             Log.e(TAG, "SDK native library not available: ${e.message}")
             _sdkAvailable.value = false
             _error.value = "Native libraries not loaded. Please check JNI setup."
-        } catch (e: Exception) {
-            Log.e(TAG, "SDK check failed: ${e.message}")
+        } catch (e: Throwable) {
+            android.util.Log.e("ModelViewModel", "SDK check failed", e)
             _sdkAvailable.value = false
+            _error.value = "SDK Error: ${e.message}"
         }
     }
 

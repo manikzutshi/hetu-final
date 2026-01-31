@@ -111,6 +111,24 @@ fun SettingsScreen(
         }
     }
 
+    LaunchedEffect(isLoading) {
+        if (isLoading) {
+             android.widget.Toast.makeText(context, "Loading AI Model...", android.widget.Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    LaunchedEffect(uiState.isLLMReady) {
+        if (uiState.isLLMReady) {
+             android.widget.Toast.makeText(context, "Model Loaded Successfully!", android.widget.Toast.LENGTH_SHORT).show()
+        }
+    }
+    
+    LaunchedEffect(error) {
+        error?.let {
+             android.widget.Toast.makeText(context, it, android.widget.Toast.LENGTH_LONG).show()
+        }
+    }
+
     Scaffold(
         containerColor = HetuTheme.colors.background,
         topBar = {
@@ -308,15 +326,17 @@ fun SettingsScreen(
                 }
             }
 
-            // Error banner
-            item {
-                error?.let { errorMessage ->
+            // Error Card
+            if (error != null) {
+                item {
                     Card(
-                        modifier = Modifier.fillMaxWidth(),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
                         colors = CardDefaults.cardColors(
-                            containerColor = Color(0xFF442222)
+                            containerColor = Color(0xFFFFEBEE), // Red 50
                         ),
-                        shape = RoundedCornerShape(12.dp)
+                        shape = RoundedCornerShape(8.dp)
                     ) {
                         Row(
                             modifier = Modifier
@@ -326,21 +346,27 @@ fun SettingsScreen(
                         ) {
                             Icon(
                                 Icons.Filled.Warning,
-                                contentDescription = "Error",
-                                tint = Color(0xFFFF6B6B)
+                                contentDescription = null,
+                                tint = Color(0xFFD32F2F)
                             )
                             Spacer(modifier = Modifier.width(12.dp))
-                            Text(
-                                text = errorMessage,
-                                color = Color(0xFFFF6B6B),
-                                fontSize = 14.sp,
-                                modifier = Modifier.weight(1f)
-                            )
+                            Column(modifier = Modifier.weight(1f)) {
+                                Text(
+                                    text = "SDK Initialization Error",
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFFD32F2F)
+                                )
+                                Text(
+                                    text = error!!,
+                                    color = Color(0xFFB71C1C),
+                                    fontSize = 13.sp
+                                )
+                            }
                             IconButton(onClick = { modelViewModel.clearError() }) {
                                 Icon(
                                     Icons.Filled.Close,
                                     contentDescription = "Dismiss",
-                                    tint = Color(0xFFFF6B6B)
+                                    tint = Color(0xFFD32F2F)
                                 )
                             }
                         }

@@ -64,10 +64,9 @@ android {
 }
 
 dependencies {
-    // RunAnywhere SDK (resolved via local includeBuild in settings.gradle.kts)
+    // Real RunAnywhere SDK
     implementation("com.runanywhere.sdk:runanywhere-kotlin:0.1.5-SNAPSHOT")
     implementation("com.runanywhere.sdk:runanywhere-core-llamacpp:0.1.5-SNAPSHOT")
-    implementation("com.runanywhere.sdk:runanywhere-core-onnx:0.1.5-SNAPSHOT")
 
     // Compose BOM - use stable version
     val composeBom = platform("androidx.compose:compose-bom:2024.12.01")

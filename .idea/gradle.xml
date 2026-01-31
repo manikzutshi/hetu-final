@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <compositeConfiguration>
           <compositeBuild compositeDefinitionSource="SCRIPT">
             <builds>
-              <build path="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin" name="RunAnywhereKotlinSDK">
+              <build path="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin" name="RunAnywhereKotlinSDK">
                 <projects>
-                  <project path="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin" />
-                  <project path="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules" />
-                  <project path="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-llamacpp" />
-                  <project path="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-onnx" />
+                  <project path="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin" />
+                  <project path="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules" />
+                  <project path="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-llamacpp" />
+                  <project path="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-onnx" />
                 </projects>
               </build>
             </builds>
@@ -24,10 +25,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin" />
-            <option value="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules" />
-            <option value="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-llamacpp" />
-            <option value="$PROJECT_DIR$/runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-onnx" />
+            <option value="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin" />
+            <option value="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules" />
+            <option value="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-llamacpp" />
+            <option value="$PROJECT_DIR$/../runanywhere-sdks/sdk/runanywhere-kotlin/modules/runanywhere-core-onnx" />
           </set>
         </option>
       </GradleProjectSettings>
